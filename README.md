@@ -1,6 +1,6 @@
-# Threatexpert
+# ThreatExpert
 
-TODO: Write a gem description
+The threatexpert gem provides a simple API to query ThreatExpert by malware name (to receive a list of matching hashes) or hash (to receive a malware report).  This also provides a simple upload feature.
 
 ## Installation
 
@@ -18,7 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+  require 'threatexpert'
+  t = ThreatExpert::Search.new
+  hashes = t.name("Worm.Hamweg.Gen")
+  html = t.md5(hashes[0])
+  sb = ThreatExpert::Submit.new
+  filename = "/malware_share/downadup/62c6c217e7980e53aa3b234e19a5a25e.dll"
+  sb.submit(filename, youremailhere)
 
 ## Contributing
 
