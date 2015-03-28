@@ -18,13 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-  require 'threatexpert'
-  t = ThreatExpert::Search.new
-  hashes = t.name("Worm.Hamweg.Gen")
-  html = t.md5(hashes[0])
-  sb = ThreatExpert::Submit.new
-  filename = "/malware_share/downadup/62c6c217e7980e53aa3b234e19a5a25e.dll"
-  sb.submit(filename, youremailhere)
+	require 'threatexpert'
+	t = ThreatExpert::Search.new
+	hashes = t.name("Worm.Hamweg.Gen")
+	html = t.md5(hashes[0])
+	sb = ThreatExpert::Submit.new
+	filename = "/malware_share/downadup/62c6c217e7980e53aa3b234e19a5a25e.dll"
+	sb.submit(filename, youremailhere)
 
 ## Contributing
 
